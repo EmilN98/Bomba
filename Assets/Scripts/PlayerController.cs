@@ -10,15 +10,16 @@ public class PlayerController : MonoBehaviour
     {
 
     }
-    void Update()
-    {
-
-    }
     public void OnMove(InputValue inputValue)
     {
-
+        Vector2 input = inputValue.Get<Vector2>();
+        moveInput = new Vector3(input.x, 0, input.y);
     }
     public void OnBomb()
+    {
+        Debug.Log("Bomb");
+    }
+    void Update()
     {
 
     }
