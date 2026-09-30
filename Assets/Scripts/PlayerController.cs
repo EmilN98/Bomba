@@ -8,12 +8,13 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveInput;
     void Start()
     {
-
+        characterController = GetComponent<CharacterController>();
+        playerInput = GetComponent<PlayerInput>();
     }
     public void OnMove(InputValue inputValue)
     {
         Vector2 input = inputValue.Get<Vector2>();
-        moveInput = new Vector3(input.x, 0, input.y);
+        moveInput = new Vector3(-input.x, 0, -input.y);
     }
     public void OnBomb()
     {
@@ -21,6 +22,10 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
-
+        if (moveInput != Vector3.zero)
+        {
+            transform.forward = moveInput;
+            characterController.Move(moveInput * movementSpeed * Time.deltaTime);
+        }
     }
 }

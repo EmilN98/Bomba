@@ -5070,15 +5070,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4062907524686073789, guid: 0d1b24c8b2b16f14d9f8ae6c3e20d57d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 4062907524686073789, guid: 0d1b24c8b2b16f14d9f8ae6c3e20d57d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4062907524686073789, guid: 0d1b24c8b2b16f14d9f8ae6c3e20d57d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 4062907524686073789, guid: 0d1b24c8b2b16f14d9f8ae6c3e20d57d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5106,6 +5106,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4062907524686073789, guid: 0d1b24c8b2b16f14d9f8ae6c3e20d57d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800102270265859420, guid: 0d1b24c8b2b16f14d9f8ae6c3e20d57d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800102270265859420, guid: 0d1b24c8b2b16f14d9f8ae6c3e20d57d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800102270265859420, guid: 0d1b24c8b2b16f14d9f8ae6c3e20d57d, type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5139,6 +5151,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e16e4ca76cee16646b231bd949e28742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  characterController: {fileID: 4363404555748248081}
+  playerInput: {fileID: 4363404555748248080}
+  movementSpeed: 5
 --- !u!114 &4363404555748248080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5166,7 +5181,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!143 &4363404555748248081
