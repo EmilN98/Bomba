@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
+    public GameObject bombPrefab;
     public CharacterController characterController;
     public PlayerInput playerInput;
     public float movementSpeed = 5f;
@@ -18,7 +19,10 @@ public class PlayerController : MonoBehaviour
     }
     public void OnBomb()
     {
-        Debug.Log("Bomb");
+        Vector3 bombPosition = transform.position + transform.forward;
+        GameObject bombObject = Instantiate(bombPrefab, transform.position, Quaternion.identity);
+        Bomb bomb = bombObject.GetComponent<Bomb>();
+        bomb.SetOwner(gameObject);
     }
     void Update()
     {
